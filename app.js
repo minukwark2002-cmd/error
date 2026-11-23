@@ -134,7 +134,7 @@ async function compose(code, r) {
   ctx.textAlign = 'right';
   ctx.fillStyle = 'rgba(255,255,255,0.6)';
   ctx.font = `400 28px ${SANS}`;
-  ctx.fillText(`No. ${String(parseInt(code, 2) + 1).padStart(2, '0')}`, W - X, 150);
+  ctx.fillText(`No. ${String(32 - parseInt(code, 2)).padStart(2, '0')}`, W - X, 150);
   ctx.textAlign = 'left';
 
   let y = 1240;
