@@ -64,7 +64,7 @@ button, a.ghost { font: inherit; cursor: pointer; border-radius: 2px; text-align
 #result { justify-content: flex-start; }
 #r-name { font-size: 2rem; }
 #r-img { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border: 1px solid var(--line); background: #111; }
-#r-how { color: var(--dim); }
+#r-desc { color: #c9c5bf; font-family: var(--serif); line-height: 2; word-break: keep-all; }
 .actions { display: grid; gap: 10px; }
 #r-panorama { margin: 0; padding-left: 1.4em; display: grid; gap: 10px; }
 #r-panorama li::marker { color: var(--red); }

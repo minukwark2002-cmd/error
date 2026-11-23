@@ -175,8 +175,7 @@ async function finish() {
   resultCanvas = canvas;
 
   $('#r-name').textContent = r.name;
-  $('#r-who').textContent = r.who;
-  $('#r-how').textContent = r.how;
+  $('#r-desc').textContent = DESCS[code];
   $('#r-img').src = canvas.toDataURL('image/png');
   const t = $('#r-track');
   t.textContent = `♪ 〈${r.track}〉 들으러 가기`;
@@ -216,7 +215,7 @@ function selfCheck() {
     dist[c] = (dist[c] || 0) + 1;
   }
   const missing = Object.keys(RESULTS).filter((c) => !dist[c]);
-  const noCopy = Object.keys(dist).filter((c) => !RESULTS[c]);
+  const noCopy = Object.keys(dist).filter((c) => !RESULTS[c] || !DESCS[c]);
   const ok = !ties && !missing.length && !noCopy.length && Object.keys(RESULTS).length === 2 ** AXES.length;
   console.table(dist);
   (ok ? console.log : console.error)(
